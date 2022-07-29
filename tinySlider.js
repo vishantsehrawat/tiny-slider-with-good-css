@@ -1,8 +1,9 @@
-// document.getElementsByClassName("my-slider");
-
 var slider = tns({
     container: ".my-slider",
-    items: 1,
+    loop: true,
+
+    mouseDrag: true, // use mouse to drag slider
+    items: 3, //  dont set width if u want to use this option (this looks a little broken to me so don't change it too much )
     responsive: {
         640: {
             edgePadding: 20,
@@ -17,4 +18,11 @@ var slider = tns({
             gutter: 30,
         },
     },
+    swipeAngle: true,
+    speed: 100,
+    rewind: true,
+    center: true, // will keep first slide in center
+    fixedWidth: 400, // sets width of container use this one instead in css
+    gutter: 30,
+    arrowKeys: true,
 });
